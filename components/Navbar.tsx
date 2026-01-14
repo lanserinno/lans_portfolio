@@ -10,7 +10,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
 
-      const sections = ['hero', 'about', 'skills', 'projects']
+      const sections = ['hero', 'about', 'skills', 'projects', 'certifications', 'education', 'contact']
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -41,11 +41,13 @@ export default function Navbar() {
             LV
           </a>
 
-          <div className="flex gap-8">
+          <div className="flex gap-6">
             {[
               { id: 'about', label: 'About' },
               { id: 'skills', label: 'Skills' },
               { id: 'projects', label: 'Projects' },
+              { id: 'certifications', label: 'Certifications' },
+              { id: 'contact', label: 'Contact' },
             ].map((item) => (
               <a
                 key={item.id}
